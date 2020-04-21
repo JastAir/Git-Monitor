@@ -41,7 +41,7 @@ class UpperNotificationView: UIView {
         }
     }
     
-    @IBInspectable var buttonColor: UIColor? = AppColor.green {
+    @IBInspectable var buttonColor: UIColor? = AppColor.success {
         didSet {
             actionButton.backgroundColor = buttonColor
         }

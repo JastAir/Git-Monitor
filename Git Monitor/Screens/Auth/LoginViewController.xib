@@ -18,20 +18,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jas-WU-GRx">
-                    <rect key="frame" x="8" y="487" width="359" height="72"/>
+                    <rect key="frame" x="8" y="457" width="359" height="92"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-En-JuZ">
-                            <rect key="frame" x="0.0" y="0.0" width="359" height="32"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-En-JuZ" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="42"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="VC0-3A-6Du"/>
+                                <constraint firstAttribute="height" constant="42" id="VC0-3A-6Du"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-Y9-eor">
-                            <rect key="frame" x="0.0" y="40" width="359" height="32"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-Y9-eor" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="359" height="42"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="orK-iC-Nnw"/>
+                                <constraint firstAttribute="height" constant="42" id="orK-iC-Nnw"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -39,17 +39,14 @@
                     </subviews>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Zv-ra-esm">
-                    <rect key="frame" x="123.5" y="20" width="128" height="447"/>
+                    <rect key="frame" x="123.5" y="20" width="128" height="417"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="128" id="TFD-sF-Cbo"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-VD-sZ3" customClass="UpperNotificationView" customModule="Git_Monitor" customModuleProvider="target">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-VD-sZ3" customClass="UpperNotificationView" customModule="Git_Monitor" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="k18-Mv-ApB"/>
-                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="backgroundCardColor">
                             <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,17 +65,17 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-5S-79m" customClass="TypedUIButton" customModule="Git_Monitor" customModuleProvider="target">
-                    <rect key="frame" x="105.5" y="567" width="164" height="36"/>
+                    <rect key="frame" x="105.5" y="557" width="164" height="46"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="164" id="aTs-Ur-Oc6"/>
-                        <constraint firstAttribute="height" constant="36" id="hmt-mg-jkJ"/>
+                        <constraint firstAttribute="height" constant="46" id="hmt-mg-jkJ"/>
                     </constraints>
                     <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" image="arrow.right" catalog="system"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="type" value="accept"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
+                            <real key="value" value="16"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>

@@ -76,7 +76,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .gray
         
         layer.cornerRadius = cornerRadius
-        layer.borderColor = AppColor.gray.cgColor
+        layer.borderColor = AppColor.info.cgColor
         layer.borderWidth = 1.0
         layer.backgroundColor = UIColor.clear.cgColor
     }
@@ -85,7 +85,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .white
         
         layer.cornerRadius = cornerRadius
-        layer.backgroundColor = AppColor.green.cgColor
+        layer.backgroundColor = AppColor.success.cgColor
         layer.borderWidth = 0
     }
 
@@ -93,7 +93,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .white
         
         layer.cornerRadius = cornerRadius
-        layer.backgroundColor = AppColor.red.cgColor
+        layer.backgroundColor = AppColor.error.cgColor
         layer.borderWidth = 0
     }
 

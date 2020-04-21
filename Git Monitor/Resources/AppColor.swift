@@ -10,7 +10,13 @@ import Foundation
 import UIKit
 
 class AppColor {
-    static let green = UIColor(hex: "#00CF91")
-    static let red = UIColor(hex: "#F85C50")
-    static let gray = UIColor(hex: "#8C8C8C")
+    
+    // General Colors
+    static let primary = UIColor(hex: "#00CF91")
+    static let secondary = UIColor(hex: "#4caf50")
+    
+    // Status Colors
+    static let info = UIColor(hex: "#8C8C8C")
+    static let success = UIColor(hex: "#00CF91")
+    static let error = UIColor(hex: "#F85C50")
 }
