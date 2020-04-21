@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct RepositoryRequestEntity: Codable {
+    
+    enum RType {
+        
+    }
+    
+    let type: String
+    let sort: String
+    let direction: String
+}

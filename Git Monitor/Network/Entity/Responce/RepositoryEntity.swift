@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct RepositoryEntity: Codable, CustomStringConvertible {
+    var description: String
+    
+    let id: Int
+    let full_name: String
+}

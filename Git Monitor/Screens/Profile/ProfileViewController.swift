@@ -9,22 +9,32 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    let rest = NetworkManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        getUsersList()
     }
+    
+    func getUsersList() {
+        guard let url = URL(string: ApiUrls.repositories(key: "jastair")) else { return }
 
+        rest.makeRequest(toURL: url, withHttpMethod: .get) { (results) in
+            if let data = results.data {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                guard let userData = try? decoder.decode(RepositoryEntity.self, from: data) else { return }
+             
+                // impl
+            }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            if let response = results.response {
+                for (key, value) in response.headers.allValues() {
+                    print(key, value)
+                }
+            }
+        }
     }
-    */
-
 }

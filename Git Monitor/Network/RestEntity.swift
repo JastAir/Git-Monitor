@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+struct RestEntity {
+    private var values: [String: String] = [:]
+ 
+    mutating func add(value: String, forKey key: String) {
+        values[key] = value
+    }
+ 
+    func value(forKey key: String) -> String? {
+        return values[key]
+    }
+ 
+    func allValues() -> [String: String] {
+        return values
+    }
+ 
+    func totalItems() -> Int {
+        return values.count
+    }
+}

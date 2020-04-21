@@ -10,9 +10,19 @@ import UIKit
 
 class RepositoryCell: UICollectionViewCell {
 
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    @IBOutlet private weak var languagePointImageView: UIImageView!
+    @IBOutlet private weak var languageNameLabel: UILabel!
+    
+    @IBOutlet private weak var starsLabel: UILabel!
+    @IBOutlet private weak var branchLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        layer.cornerRadius = 8
     }
 
 }

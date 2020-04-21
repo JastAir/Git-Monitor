@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationsViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedsViewController" customModule="Git_Monitor" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="KIu-r9-Yse" id="Rjj-Nf-sqD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +17,61 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KIu-r9-Yse">
+                    <rect key="frame" x="0.0" y="42" width="375" height="625"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvB-M7-k1T">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETo-ho-x56">
+                            <rect key="frame" x="8" y="4" width="321" height="34"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-TN-7N8" customClass="ProfileItemView" customModule="Git_Monitor" customModuleProvider="target">
+                            <rect key="frame" x="337" y="4" width="34" height="34"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dcA-TN-7N8" secondAttribute="height" multiplier="1:1" id="5N6-Uw-n9O"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWeight">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dcA-TN-7N8" secondAttribute="bottom" constant="4" id="4vP-0q-JBw"/>
+                        <constraint firstAttribute="height" constant="42" id="62f-As-WZC"/>
+                        <constraint firstItem="ETo-ho-x56" firstAttribute="leading" secondItem="MvB-M7-k1T" secondAttribute="leading" constant="8" id="8yD-2E-GZf"/>
+                        <constraint firstAttribute="trailing" secondItem="dcA-TN-7N8" secondAttribute="trailing" constant="4" id="a5g-7O-Spc"/>
+                        <constraint firstItem="dcA-TN-7N8" firstAttribute="top" secondItem="MvB-M7-k1T" secondAttribute="top" constant="4" id="a9f-R3-grg"/>
+                        <constraint firstItem="ETo-ho-x56" firstAttribute="top" secondItem="MvB-M7-k1T" secondAttribute="top" constant="4" id="hoY-Ci-bcF"/>
+                        <constraint firstItem="dcA-TN-7N8" firstAttribute="leading" secondItem="ETo-ho-x56" secondAttribute="trailing" constant="8" id="p8k-WE-2dP"/>
+                        <constraint firstAttribute="bottom" secondItem="ETo-ho-x56" secondAttribute="bottom" constant="4" id="uuj-Hr-bgI"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="MvB-M7-k1T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BIs-C2-NPz"/>
+                <constraint firstItem="MvB-M7-k1T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BuY-8x-ggD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KIu-r9-Yse" secondAttribute="bottom" id="L1F-eo-x8G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MvB-M7-k1T" secondAttribute="trailing" id="Qki-e1-JTw"/>
+                <constraint firstItem="KIu-r9-Yse" firstAttribute="top" secondItem="MvB-M7-k1T" secondAttribute="bottom" id="TaD-r8-DWG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KIu-r9-Yse" secondAttribute="trailing" id="dLd-pb-ud6"/>
+                <constraint firstItem="KIu-r9-Yse" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="v6c-gO-XRy"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="144.3778110944528"/>
         </view>
     </objects>
 </document>

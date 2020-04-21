@@ -8,14 +8,47 @@
 
 import UIKit
 
+@IBDesignable
 class ProfileItemView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    private var imageContainer: UIImageView!
+    var profileImage = UIImage(named: "avatar_placeholder") {
+        didSet {
+            imageContainer.image = profileImage
+        }
     }
-    */
-
+    
+    @IBInspectable let borderWeight: CGFloat = 1.0
+    @IBInspectable let borderColor: UIColor = AppColor.gray
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setupView()
+    }
+    
+    private func setupView() {
+        clipsToBounds = true
+        backgroundColor = .clear
+        
+        layer.cornerRadius = frame.height / 2
+        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = borderWeight
+        
+        imageContainer = UIImageView()
+        imageContainer.image = profileImage
+        addSubview(imageContainer)
+        
+        imageContainer.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
 }

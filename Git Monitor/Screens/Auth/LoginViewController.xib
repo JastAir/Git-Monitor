@@ -1,12 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Git_Monitor" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -15,8 +16,96 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jas-WU-GRx">
+                    <rect key="frame" x="8" y="487" width="359" height="72"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-En-JuZ">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="VC0-3A-6Du"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-Y9-eor">
+                            <rect key="frame" x="0.0" y="40" width="359" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="orK-iC-Nnw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Zv-ra-esm">
+                    <rect key="frame" x="123.5" y="20" width="128" height="447"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="TFD-sF-Cbo"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-VD-sZ3" customClass="UpperNotificationView" customModule="Git_Monitor" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="k18-Mv-ApB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundCardColor">
+                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="cardTextTitle" value="Notification about offer for your pull request in team repository."/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="cardTextColor">
+                            <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="buttonTitle" value="Show"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttonTitleColor">
+                            <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                            <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-5S-79m" customClass="TypedUIButton" customModule="Git_Monitor" customModuleProvider="target">
+                    <rect key="frame" x="105.5" y="567" width="164" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="164" id="aTs-Ur-Oc6"/>
+                        <constraint firstAttribute="height" constant="36" id="hmt-mg-jkJ"/>
+                    </constraints>
+                    <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="arrow.right" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="type" value="accept"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="signInOnClick:" destination="-1" eventType="touchUpInside" id="01q-Cs-VpL"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="CLX-VD-sZ3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Gu-G4-Lly"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="y5e-5S-79m" secondAttribute="bottom" constant="64" id="9gT-Xi-SK7"/>
+                <constraint firstItem="y5e-5S-79m" firstAttribute="top" secondItem="jas-WU-GRx" secondAttribute="bottom" constant="8" id="HnR-f2-G2C"/>
+                <constraint firstItem="jas-WU-GRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="KeD-rx-2su"/>
+                <constraint firstItem="2Zv-ra-esm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Nx7-pe-g69"/>
+                <constraint firstItem="CLX-VD-sZ3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qna-AE-Fgi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jas-WU-GRx" secondAttribute="trailing" constant="8" id="V4k-37-7Nh"/>
+                <constraint firstItem="jas-WU-GRx" firstAttribute="top" secondItem="2Zv-ra-esm" secondAttribute="bottom" constant="20" id="WgW-at-A4f"/>
+                <constraint firstItem="y5e-5S-79m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XN8-vl-c61"/>
+                <constraint firstItem="2Zv-ra-esm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cZ1-Jz-Qfz"/>
+                <constraint firstItem="CLX-VD-sZ3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wg1-De-O2z"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="144.3778110944528"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="logo" width="1301" height="1301"/>
+    </resources>
 </document>

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol UpperNotificationViewDelegate {
-    func onButtonTap()
-    func onCardTap()
+    func onButtonTap(_ sender: UIButton)
+    func onHideDrag(_ sender: UIView)
 }
 
 @IBDesignable
@@ -18,37 +19,37 @@ class UpperNotificationView: UIView {
     
     @IBInspectable var backgroundCardColor: UIColor? = .lightGray {
         didSet {
-            setNeedsDisplay()
+            backgroundColor = backgroundCardColor
         }
     }
     
     @IBInspectable var cardTextTitle: String? = "Notification text ..." {
         didSet {
-            setNeedsDisplay()
+            cardTextLabel.text = cardTextTitle
         }
     }
     
     @IBInspectable var cardTextColor: UIColor? = .darkGray {
         didSet {
-            setNeedsDisplay()
+            cardTextLabel.textColor = cardTextColor
         }
     }
     
     @IBInspectable var buttonTitle: String? = "OK" {
         didSet {
-            setNeedsDisplay()
+            actionButton.setTitle(buttonTitle, for: .normal)
         }
     }
     
-    @IBInspectable var buttonColor: UIColor? = .green {
+    @IBInspectable var buttonColor: UIColor? = AppColor.green {
         didSet {
-            setNeedsDisplay()
+            actionButton.backgroundColor = buttonColor
         }
     }
     
     @IBInspectable var buttonTitleColor: UIColor? = .white {
         didSet {
-            setNeedsDisplay()
+            actionButton.setTitleColor(buttonTitleColor, for: .normal)
         }
     }
     
@@ -59,25 +60,86 @@ class UpperNotificationView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupView()
+        makeConstraints()
+        showWithAnimate()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupView()
+        makeConstraints()
+        showWithAnimate()
+    }
+        
+    override func prepareForInterfaceBuilder() {
+        setupView()
+    }
+    
+    private func showWithAnimate() {
+        let originY = frame.origin.y
+        frame.origin.y = -frame.height
+        UIView.animate(withDuration: 0.25) {
+            self.frame.origin.y = originY
+        }
     }
     
     private func setupView() {
         actionButton = UIButton()
-        actionButton.titleLabel?.text = buttonTitle
-        actionButton.backgroundColor = buttonColor
+        actionButton.setTitle(buttonTitle, for: .normal)
         actionButton.setTitleColor(buttonTitleColor, for: .normal)
+        actionButton.titleLabel?.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .regular)
+        actionButton.backgroundColor = buttonColor
+        actionButton.layer.cornerRadius = 8
+        actionButton.addTarget(nil, action: #selector(onButtonTap(_:)), for: .touchUpInside)
+        addSubview(actionButton)
         
         cardTextLabel = UILabel()
         cardTextLabel.text = cardTextTitle
+        cardTextLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 14, weight: .thin)
         cardTextLabel.textColor = cardTextColor
-        cardTextLabel.lineBreakMode = .byWordWrapping
+        cardTextLabel.numberOfLines = 0
+        cardTextLabel.adjustsFontSizeToFitWidth = true
+        addSubview(cardTextLabel)
+        
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(onHideDrag(_:)))
+        swipeGestureRecognizer.direction = .up
+        addGestureRecognizer(swipeGestureRecognizer)
     }
     
     private func makeConstraints() {
-        actionButton.
+        actionButton.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().inset(8)
+            make.top.equalToSuperview().inset(8)
+            make.bottom.equalToSuperview().inset(8)
+            make.width.equalTo(74)
+        }
+        
+        cardTextLabel.snp.makeConstraints { (make) in
+            make.leading.equalToSuperview().inset(8)
+            make.top.equalToSuperview().inset(8)
+            make.bottom.equalToSuperview().inset(8)
+            make.trailing.equalTo(actionButton.snp.leading).inset(-8)
+        }
+    }
+}
+
+private extension UpperNotificationView {
+    @objc func onButtonTap(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.frame.origin.y = -self.frame.height
+        }) { _ in
+            self.removeFromSuperview()
+            self.delegate?.onButtonTap(sender)
+        }
+    }
+    
+    @objc func onHideDrag(_ sender: UIView) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.frame.origin.y = -self.frame.height
+        }) { _ in
+            self.removeFromSuperview()
+            self.delegate?.onHideDrag(sender)
+        }
     }
 }

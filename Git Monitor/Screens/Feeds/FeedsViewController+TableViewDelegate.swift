@@ -6,4 +6,14 @@
 //  Copyright © 2020 F Developers. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension FeedsViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}

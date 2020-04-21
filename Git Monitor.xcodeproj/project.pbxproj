@@ -3,18 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D047222324479EEF00D8E667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047222224479EEF00D8E667 /* AppDelegate.swift */; };
 		D047222524479EEF00D8E667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047222424479EEF00D8E667 /* SceneDelegate.swift */; };
-		D047222724479EEF00D8E667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047222624479EEF00D8E667 /* ViewController.swift */; };
 		D047222A24479EEF00D8E667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D047222824479EEF00D8E667 /* Main.storyboard */; };
 		D047222D24479EEF00D8E667 /* Git_Monitor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D047222B24479EEF00D8E667 /* Git_Monitor.xcdatamodeld */; };
 		D047222F24479EF100D8E667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D047222E24479EF100D8E667 /* Assets.xcassets */; };
 		D047223224479EF100D8E667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D047223024479EF100D8E667 /* LaunchScreen.storyboard */; };
 		D047223D24479EF100D8E667 /* Git_MonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047223C24479EF100D8E667 /* Git_MonitorTests.swift */; };
+		D047224C2447A12600D8E667 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047224A2447A12600D8E667 /* LoginViewController.swift */; };
+		D047224D2447A12600D8E667 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D047224B2447A12600D8E667 /* LoginViewController.xib */; };
+		D04722522447A61400D8E667 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04722502447A61400D8E667 /* FeedsViewController.swift */; };
+		D04722532447A61400D8E667 /* FeedsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04722512447A61400D8E667 /* FeedsViewController.xib */; };
+		D0823D67244A41980037ED97 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0823D65244A41980037ED97 /* ProfileViewController.swift */; };
+		D0823D68244A41980037ED97 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0823D66244A41980037ED97 /* ProfileViewController.xib */; };
+		D0823D6B244A46BC0037ED97 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0823D69244A46BC0037ED97 /* RepositoryCell.swift */; };
+		D0823D6C244A46BC0037ED97 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0823D6A244A46BC0037ED97 /* RepositoryCell.xib */; };
+		D0A89EE3244E427E00CDC179 /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A89EE2244E427E00CDC179 /* RepositoryEntity.swift */; };
+		D0A89EE5244EDD8C00CDC179 /* RepositoryRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A89EE4244EDD8C00CDC179 /* RepositoryRequestEntity.swift */; };
+		D0B3BD74244E313B00DB59A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD73244E313B00DB59A9 /* NetworkManager.swift */; };
+		D0B3BD76244E31FA00DB59A9 /* RestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD75244E31FA00DB59A9 /* RestEntity.swift */; };
+		D0B3BD7B244E3EB900DB59A9 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD7A244E3EB900DB59A9 /* ApiUrls.swift */; };
+		D0B728FE2448F74F002FA3AC /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B728FD2448F74F002FA3AC /* StyledTextField.swift */; };
+		D0B729002449015A002FA3AC /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B728FF2449015A002FA3AC /* ProfileItemView.swift */; };
+		D0ECABDB2447A83500794183 /* FeedsViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABDA2447A83500794183 /* FeedsViewController+TableViewDelegate.swift */; };
+		D0ECABDE24484F5500794183 /* UpperNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABDD24484F5500794183 /* UpperNotificationView.swift */; };
+		D0ECABE1244855E200794183 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0ECABE0244855E200794183 /* SnapKit */; };
+		D0ECABE52448614200794183 /* TypedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE42448614200794183 /* TypedUIButton.swift */; };
+		D0ECABE82448687700794183 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE72448687700794183 /* AppColor.swift */; };
+		D0ECABEA2448694300794183 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE92448694300794183 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +51,6 @@
 		D047221F24479EEF00D8E667 /* Git Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Git Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047222224479EEF00D8E667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D047222424479EEF00D8E667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D047222624479EEF00D8E667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D047222924479EEF00D8E667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D047222C24479EEF00D8E667 /* Git_Monitor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Git_Monitor.xcdatamodel; sourceTree = "<group>"; };
 		D047222E24479EF100D8E667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +59,27 @@
 		D047223824479EF100D8E667 /* Git MonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Git MonitorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047223C24479EF100D8E667 /* Git_MonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Git_MonitorTests.swift; sourceTree = "<group>"; };
 		D047223E24479EF100D8E667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D047224724479F1800D8E667 /* Git Monitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Git Monitor.entitlements"; sourceTree = "<group>"; };
+		D047224A2447A12600D8E667 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D047224B2447A12600D8E667 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D04722502447A61400D8E667 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
+		D04722512447A61400D8E667 /* FeedsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedsViewController.xib; sourceTree = "<group>"; };
+		D0823D65244A41980037ED97 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D0823D66244A41980037ED97 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		D0823D69244A46BC0037ED97 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		D0823D6A244A46BC0037ED97 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		D0A89EE2244E427E00CDC179 /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
+		D0A89EE4244EDD8C00CDC179 /* RepositoryRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequestEntity.swift; sourceTree = "<group>"; };
+		D0B3BD73244E313B00DB59A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D0B3BD75244E31FA00DB59A9 /* RestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestEntity.swift; sourceTree = "<group>"; };
+		D0B3BD7A244E3EB900DB59A9 /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
+		D0B728FD2448F74F002FA3AC /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
+		D0B728FF2449015A002FA3AC /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
+		D0ECABDA2447A83500794183 /* FeedsViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedsViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		D0ECABDD24484F5500794183 /* UpperNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperNotificationView.swift; sourceTree = "<group>"; };
+		D0ECABE42448614200794183 /* TypedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedUIButton.swift; sourceTree = "<group>"; };
+		D0ECABE72448687700794183 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		D0ECABE92448694300794183 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ECABE1244855E200794183 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,9 +122,14 @@
 		D047222124479EEF00D8E667 /* Git Monitor */ = {
 			isa = PBXGroup;
 			children = (
+				D0B3BD72244E300F00DB59A9 /* Network */,
+				D0ECABEB2448696E00794183 /* Resources */,
+				D0ECABE62448686000794183 /* Extensions */,
+				D0ECABDC24484F2400794183 /* View */,
+				D047224824479F6C00D8E667 /* Screens */,
+				D047224724479F1800D8E667 /* Git Monitor.entitlements */,
 				D047222224479EEF00D8E667 /* AppDelegate.swift */,
 				D047222424479EEF00D8E667 /* SceneDelegate.swift */,
-				D047222624479EEF00D8E667 /* ViewController.swift */,
 				D047222824479EEF00D8E667 /* Main.storyboard */,
 				D047222E24479EF100D8E667 /* Assets.xcassets */,
 				D047223024479EF100D8E667 /* LaunchScreen.storyboard */,
@@ -102,6 +148,157 @@
 			path = "Git MonitorTests";
 			sourceTree = "<group>";
 		};
+		D047224824479F6C00D8E667 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D0823D64244A41700037ED97 /* Profile */,
+				D0823D63244A41640037ED97 /* PullRequests */,
+				D047224F2447A5D700D8E667 /* Feeds */,
+				D047224924479FF700D8E667 /* Auth */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D047224924479FF700D8E667 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D047224A2447A12600D8E667 /* LoginViewController.swift */,
+				D047224B2447A12600D8E667 /* LoginViewController.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D047224F2447A5D700D8E667 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				D04722542447A61900D8E667 /* Cells */,
+				D04722502447A61400D8E667 /* FeedsViewController.swift */,
+				D04722512447A61400D8E667 /* FeedsViewController.xib */,
+				D0ECABDA2447A83500794183 /* FeedsViewController+TableViewDelegate.swift */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		D04722542447A61900D8E667 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D0823D63244A41640037ED97 /* PullRequests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PullRequests;
+			sourceTree = "<group>";
+		};
+		D0823D64244A41700037ED97 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D0823D6D244A46C10037ED97 /* Cells */,
+				D0823D65244A41980037ED97 /* ProfileViewController.swift */,
+				D0823D66244A41980037ED97 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D0823D6D244A46C10037ED97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D0823D69244A46BC0037ED97 /* RepositoryCell.swift */,
+				D0823D6A244A46BC0037ED97 /* RepositoryCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D0B3BD72244E300F00DB59A9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D0B3BD77244E3E7400DB59A9 /* Entity */,
+				D0B3BD73244E313B00DB59A9 /* NetworkManager.swift */,
+				D0B3BD75244E31FA00DB59A9 /* RestEntity.swift */,
+				D0B3BD7A244E3EB900DB59A9 /* ApiUrls.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D0B3BD77244E3E7400DB59A9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0B3BD79244E3E8900DB59A9 /* Responce */,
+				D0B3BD78244E3E8300DB59A9 /* Request */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D0B3BD78244E3E8300DB59A9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D0A89EE4244EDD8C00CDC179 /* RepositoryRequestEntity.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		D0B3BD79244E3E8900DB59A9 /* Responce */ = {
+			isa = PBXGroup;
+			children = (
+				D0A89EE2244E427E00CDC179 /* RepositoryEntity.swift */,
+			);
+			path = Responce;
+			sourceTree = "<group>";
+		};
+		D0B728FC2448F701002FA3AC /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				D0B728FD2448F74F002FA3AC /* StyledTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		D0ECABDC24484F2400794183 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0B728FC2448F701002FA3AC /* TextField */,
+				D0ECABE3244860F800794183 /* Button */,
+				D0ECABE2244860EC00794183 /* Notification */,
+				D0B728FF2449015A002FA3AC /* ProfileItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0ECABE2244860EC00794183 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D0ECABDD24484F5500794183 /* UpperNotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		D0ECABE3244860F800794183 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				D0ECABE42448614200794183 /* TypedUIButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		D0ECABE62448686000794183 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0ECABE92448694300794183 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0ECABEB2448696E00794183 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0ECABE72448687700794183 /* AppColor.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,6 +315,9 @@
 			dependencies = (
 			);
 			name = "Git Monitor";
+			packageProductDependencies = (
+				D0ECABE0244855E200794183 /* SnapKit */,
+			);
 			productName = "Git Monitor";
 			productReference = D047221F24479EEF00D8E667 /* Git Monitor.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +368,9 @@
 				Base,
 			);
 			mainGroup = D047221624479EEF00D8E667;
+			packageReferences = (
+				D0ECABDF244855E200794183 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D047222024479EEF00D8E667 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,6 +386,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0823D68244A41980037ED97 /* ProfileViewController.xib in Resources */,
+				D0823D6C244A46BC0037ED97 /* RepositoryCell.xib in Resources */,
+				D047224D2447A12600D8E667 /* LoginViewController.xib in Resources */,
+				D04722532447A61400D8E667 /* FeedsViewController.xib in Resources */,
 				D047223224479EF100D8E667 /* LaunchScreen.storyboard in Resources */,
 				D047222F24479EF100D8E667 /* Assets.xcassets in Resources */,
 				D047222A24479EEF00D8E667 /* Main.storyboard in Resources */,
@@ -203,9 +410,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D047222724479EEF00D8E667 /* ViewController.swift in Sources */,
+				D0823D6B244A46BC0037ED97 /* RepositoryCell.swift in Sources */,
 				D047222324479EEF00D8E667 /* AppDelegate.swift in Sources */,
+				D0ECABE82448687700794183 /* AppColor.swift in Sources */,
+				D0B3BD74244E313B00DB59A9 /* NetworkManager.swift in Sources */,
 				D047222524479EEF00D8E667 /* SceneDelegate.swift in Sources */,
+				D0B3BD7B244E3EB900DB59A9 /* ApiUrls.swift in Sources */,
+				D0823D67244A41980037ED97 /* ProfileViewController.swift in Sources */,
+				D0ECABE52448614200794183 /* TypedUIButton.swift in Sources */,
+				D0A89EE3244E427E00CDC179 /* RepositoryEntity.swift in Sources */,
+				D0ECABDB2447A83500794183 /* FeedsViewController+TableViewDelegate.swift in Sources */,
+				D0ECABDE24484F5500794183 /* UpperNotificationView.swift in Sources */,
+				D0B729002449015A002FA3AC /* ProfileItemView.swift in Sources */,
+				D0B3BD76244E31FA00DB59A9 /* RestEntity.swift in Sources */,
+				D0ECABEA2448694300794183 /* UIColor.swift in Sources */,
+				D04722522447A61400D8E667 /* FeedsViewController.swift in Sources */,
+				D047224C2447A12600D8E667 /* LoginViewController.swift in Sources */,
+				D0B728FE2448F74F002FA3AC /* StyledTextField.swift in Sources */,
+				D0A89EE5244EDD8C00CDC179 /* RepositoryRequestEntity.swift in Sources */,
 				D047222D24479EEF00D8E667 /* Git_Monitor.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Git Monitor/Git Monitor.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELDYT74352;
 				INFOPLIST_FILE = "Git Monitor/Info.plist";
@@ -375,6 +598,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fdev.Git-Monitor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Git Monitor/Git Monitor.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELDYT74352;
 				INFOPLIST_FILE = "Git Monitor/Info.plist";
@@ -393,6 +618,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fdev.Git-Monitor";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +699,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D0ECABDF244855E200794183 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D0ECABE0244855E200794183 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0ECABDF244855E200794183 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D047222B24479EEF00D8E667 /* Git_Monitor.xcdatamodeld */ = {

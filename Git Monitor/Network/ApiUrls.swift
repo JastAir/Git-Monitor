@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class ApiUrls {
+    
+    private static let host_url = "https://api.github.com"
+    
+    static func repositories(key: String) -> String {
+        return "\(host_url)/users/\(key)/repos"
+    }
+}
