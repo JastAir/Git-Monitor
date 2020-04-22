@@ -22,6 +22,7 @@
 		D0823D68244A41980037ED97 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0823D66244A41980037ED97 /* ProfileViewController.xib */; };
 		D0823D6B244A46BC0037ED97 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0823D69244A46BC0037ED97 /* RepositoryCell.swift */; };
 		D0823D6C244A46BC0037ED97 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0823D6A244A46BC0037ED97 /* RepositoryCell.xib */; };
+		D0A459B42450D5A500C1C1D7 /* UIViewController+KeyboardHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A459B32450D5A500C1C1D7 /* UIViewController+KeyboardHandling.swift */; };
 		D0A89EE3244E427E00CDC179 /* RepositoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A89EE2244E427E00CDC179 /* RepositoryEntity.swift */; };
 		D0A89EE5244EDD8C00CDC179 /* RepositoryRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A89EE4244EDD8C00CDC179 /* RepositoryRequestEntity.swift */; };
 		D0B3BD74244E313B00DB59A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD73244E313B00DB59A9 /* NetworkManager.swift */; };
@@ -29,11 +30,11 @@
 		D0B3BD7B244E3EB900DB59A9 /* ApiUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3BD7A244E3EB900DB59A9 /* ApiUrls.swift */; };
 		D0B728FE2448F74F002FA3AC /* StyledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B728FD2448F74F002FA3AC /* StyledTextField.swift */; };
 		D0B729002449015A002FA3AC /* ProfileItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B728FF2449015A002FA3AC /* ProfileItemView.swift */; };
+		D0D81A972450EE89004DAFC2 /* UIColor+Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D81A962450EE89004DAFC2 /* UIColor+Theming.swift */; };
 		D0ECABDB2447A83500794183 /* FeedsViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABDA2447A83500794183 /* FeedsViewController+TableViewDelegate.swift */; };
 		D0ECABDE24484F5500794183 /* UpperNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABDD24484F5500794183 /* UpperNotificationView.swift */; };
 		D0ECABE1244855E200794183 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0ECABE0244855E200794183 /* SnapKit */; };
 		D0ECABE52448614200794183 /* TypedUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE42448614200794183 /* TypedUIButton.swift */; };
-		D0ECABE82448687700794183 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE72448687700794183 /* AppColor.swift */; };
 		D0ECABEA2448694300794183 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ECABE92448694300794183 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		D0823D66244A41980037ED97 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		D0823D69244A46BC0037ED97 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		D0823D6A244A46BC0037ED97 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		D0A459B32450D5A500C1C1D7 /* UIViewController+KeyboardHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardHandling.swift"; sourceTree = "<group>"; };
 		D0A89EE2244E427E00CDC179 /* RepositoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryEntity.swift; sourceTree = "<group>"; };
 		D0A89EE4244EDD8C00CDC179 /* RepositoryRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRequestEntity.swift; sourceTree = "<group>"; };
 		D0B3BD73244E313B00DB59A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -75,10 +77,10 @@
 		D0B3BD7A244E3EB900DB59A9 /* ApiUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrls.swift; sourceTree = "<group>"; };
 		D0B728FD2448F74F002FA3AC /* StyledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledTextField.swift; sourceTree = "<group>"; };
 		D0B728FF2449015A002FA3AC /* ProfileItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileItemView.swift; sourceTree = "<group>"; };
+		D0D81A962450EE89004DAFC2 /* UIColor+Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theming.swift"; sourceTree = "<group>"; };
 		D0ECABDA2447A83500794183 /* FeedsViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedsViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
 		D0ECABDD24484F5500794183 /* UpperNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpperNotificationView.swift; sourceTree = "<group>"; };
 		D0ECABE42448614200794183 /* TypedUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypedUIButton.swift; sourceTree = "<group>"; };
-		D0ECABE72448687700794183 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		D0ECABE92448694300794183 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B3BD72244E300F00DB59A9 /* Network */,
-				D0ECABEB2448696E00794183 /* Resources */,
+				D0ECABEB2448696E00794183 /* Common */,
 				D0ECABE62448686000794183 /* Extensions */,
 				D0ECABDC24484F2400794183 /* View */,
 				D047224824479F6C00D8E667 /* Screens */,
@@ -287,16 +289,17 @@
 			isa = PBXGroup;
 			children = (
 				D0ECABE92448694300794183 /* UIColor.swift */,
+				D0A459B32450D5A500C1C1D7 /* UIViewController+KeyboardHandling.swift */,
+				D0D81A962450EE89004DAFC2 /* UIColor+Theming.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D0ECABEB2448696E00794183 /* Resources */ = {
+		D0ECABEB2448696E00794183 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D0ECABE72448687700794183 /* AppColor.swift */,
 			);
-			path = Resources;
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,9 +413,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A459B42450D5A500C1C1D7 /* UIViewController+KeyboardHandling.swift in Sources */,
 				D0823D6B244A46BC0037ED97 /* RepositoryCell.swift in Sources */,
 				D047222324479EEF00D8E667 /* AppDelegate.swift in Sources */,
-				D0ECABE82448687700794183 /* AppColor.swift in Sources */,
 				D0B3BD74244E313B00DB59A9 /* NetworkManager.swift in Sources */,
 				D047222524479EEF00D8E667 /* SceneDelegate.swift in Sources */,
 				D0B3BD7B244E3EB900DB59A9 /* ApiUrls.swift in Sources */,
@@ -422,6 +425,7 @@
 				D0ECABDB2447A83500794183 /* FeedsViewController+TableViewDelegate.swift in Sources */,
 				D0ECABDE24484F5500794183 /* UpperNotificationView.swift in Sources */,
 				D0B729002449015A002FA3AC /* ProfileItemView.swift in Sources */,
+				D0D81A972450EE89004DAFC2 /* UIColor+Theming.swift in Sources */,
 				D0B3BD76244E31FA00DB59A9 /* RestEntity.swift in Sources */,
 				D0ECABEA2448694300794183 /* UIColor.swift in Sources */,
 				D04722522447A61400D8E667 /* FeedsViewController.swift in Sources */,

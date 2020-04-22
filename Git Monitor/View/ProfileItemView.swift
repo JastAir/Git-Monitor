@@ -19,7 +19,7 @@ class ProfileItemView: UIView {
     }
     
     @IBInspectable let borderWeight: CGFloat = 1.0
-    @IBInspectable let borderColor: UIColor = AppColor.info
+    @IBInspectable let borderColor: UIColor = UIColor().primaryBorder
     
     override init(frame: CGRect) {
         super.init(frame: frame)

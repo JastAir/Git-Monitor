@@ -8,7 +8,6 @@
 
 import UIKit
 
-@IBDesignable
 class TypedUIButton: UIButton {
     
     enum ButtonType {
@@ -18,24 +17,8 @@ class TypedUIButton: UIButton {
     }
     
     var viewType: ButtonType = .simple
-
-    @IBInspectable var type: String? {
-        didSet {
-            switch type?.lowercased() {
-            case "simple":
-                viewType = .simple
-            case "accept":
-                viewType = .accept
-            case "dismiss":
-                viewType = .dismiss
-            default:
-                viewType = .simple
-            }
-            updateView()
-        }
-    }
     
-    @IBInspectable var title: String? {
+    var title: String? {
         didSet {
             titleLabel?.text = title
             updateView()
@@ -76,7 +59,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .gray
         
         layer.cornerRadius = cornerRadius
-        layer.borderColor = AppColor.info.cgColor
+        layer.borderColor = UIColor().infoStatus.cgColor
         layer.borderWidth = 1.0
         layer.backgroundColor = UIColor.clear.cgColor
     }
@@ -85,7 +68,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .white
         
         layer.cornerRadius = cornerRadius
-        layer.backgroundColor = AppColor.success.cgColor
+        layer.backgroundColor = UIColor().successStatus.cgColor
         layer.borderWidth = 0
     }
 
@@ -93,7 +76,7 @@ private extension TypedUIButton {
         titleLabel?.textColor = .white
         
         layer.cornerRadius = cornerRadius
-        layer.backgroundColor = AppColor.error.cgColor
+        layer.backgroundColor = UIColor().errorStatus.cgColor
         layer.borderWidth = 0
     }
 

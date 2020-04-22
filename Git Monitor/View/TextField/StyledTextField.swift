@@ -14,7 +14,6 @@ enum StyledTextFieldType {
     case error
 }
 
-@IBDesignable
 class StyledTextField: UITextField {
     
     var type: StyledTextFieldType = .info
@@ -31,11 +30,11 @@ class StyledTextField: UITextField {
         
         switch type {
         case .info:
-            layer.borderColor = AppColor.info.cgColor
+            layer.borderColor = UIColor().infoStatus.cgColor
         case .success:
-            layer.borderColor = AppColor.success.cgColor
+            layer.borderColor = UIColor().successStatus.cgColor
         case .error:
-            layer.borderColor = AppColor.error.cgColor
+            layer.borderColor = UIColor().errorStatus.cgColor
         }
     }
 }

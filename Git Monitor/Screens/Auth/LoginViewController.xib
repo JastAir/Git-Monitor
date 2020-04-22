@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,21 +21,21 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jas-WU-GRx">
                     <rect key="frame" x="8" y="457" width="359" height="92"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-En-JuZ" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-En-JuZ" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="359" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="VC0-3A-6Du"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-Y9-eor" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-Y9-eor" customClass="StyledTextField" customModule="Git_Monitor" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="359" height="42"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="42" id="orK-iC-Nnw"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                         </textField>
                     </subviews>
                 </stackView>
@@ -44,9 +45,9 @@
                         <constraint firstAttribute="width" constant="128" id="TFD-sF-Cbo"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-VD-sZ3" customClass="UpperNotificationView" customModule="Git_Monitor" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CLX-VD-sZ3" customClass="UpperNotificationView" customModule="Git_Monitor" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" name="cellBackground"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="backgroundCardColor">
                             <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,6 +90,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="y5e-5S-79m" secondAttribute="bottom" constant="64" id="9gT-Xi-SK7"/>
                 <constraint firstItem="y5e-5S-79m" firstAttribute="top" secondItem="jas-WU-GRx" secondAttribute="bottom" constant="8" id="HnR-f2-G2C"/>
                 <constraint firstItem="jas-WU-GRx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="KeD-rx-2su"/>
+                <constraint firstAttribute="bottom" secondItem="CLX-VD-sZ3" secondAttribute="bottom" constant="617.5" id="M4D-VM-N7I"/>
                 <constraint firstItem="2Zv-ra-esm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Nx7-pe-g69"/>
                 <constraint firstItem="CLX-VD-sZ3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Qna-AE-Fgi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jas-WU-GRx" secondAttribute="trailing" constant="8" id="V4k-37-7Nh"/>
@@ -104,5 +106,8 @@
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="logo" width="1301" height="1301"/>
+        <namedColor name="cellBackground">
+            <color red="0.94499999284744263" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

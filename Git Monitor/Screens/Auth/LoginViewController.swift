@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        enableKeyboardHandling()
     }
     @IBAction func signInOnClick(_ sender: Any) {
         present(ProfileViewController(), animated: true, completion: nil)

@@ -14,40 +14,39 @@ protocol UpperNotificationViewDelegate {
     func onHideDrag(_ sender: UIView)
 }
 
-@IBDesignable
 class UpperNotificationView: UIView {
     
-    @IBInspectable var backgroundCardColor: UIColor? = .lightGray {
+    var backgroundCardColor: UIColor? = .lightGray {
         didSet {
             backgroundColor = backgroundCardColor
         }
     }
     
-    @IBInspectable var cardTextTitle: String? = "Notification text ..." {
+    var cardTextTitle: String? = "Notification text ..." {
         didSet {
             cardTextLabel.text = cardTextTitle
         }
     }
     
-    @IBInspectable var cardTextColor: UIColor? = .darkGray {
+    var cardTextColor: UIColor? = .darkGray {
         didSet {
             cardTextLabel.textColor = cardTextColor
         }
     }
     
-    @IBInspectable var buttonTitle: String? = "OK" {
+    var buttonTitle: String? = "OK" {
         didSet {
             actionButton.setTitle(buttonTitle, for: .normal)
         }
     }
     
-    @IBInspectable var buttonColor: UIColor? = AppColor.success {
+    var buttonColor: UIColor? = UIColor().successStatus {
         didSet {
             actionButton.backgroundColor = buttonColor
         }
     }
     
-    @IBInspectable var buttonTitleColor: UIColor? = .white {
+    var buttonTitleColor: UIColor? = .white {
         didSet {
             actionButton.setTitleColor(buttonTitleColor, for: .normal)
         }
@@ -70,10 +69,6 @@ class UpperNotificationView: UIView {
         setupView()
         makeConstraints()
         showWithAnimate()
-    }
-        
-    override func prepareForInterfaceBuilder() {
-        setupView()
     }
     
     private func showWithAnimate() {
